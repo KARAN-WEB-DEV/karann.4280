@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://gurpreet4311java.netlify.app/functions.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+  
+  <style>
+    .container {
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 20% 80%;
+      height:83vh;
+
+    }
+
+    .left {
+      background-color: lightblue;
+      padding: 10px;
+      overflow: scroll;
+  
+    
+    }
+
+    .right {
+      background-image: url("backgr.jpg");
+      background-color: lightblue;
+      padding: 10px;
+      overflow: scroll;
+     
+    }
+
+    .button {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: red;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  
+
+    .button:hover {
+      background-color: rgb(232, 143, 156);
+    }
+  </style>
+</head>
+<body><header style="background-color: lightblue;"><a href="https://gurpreet4311java.netlify.app/">
+  <img width="180px" src="./functions_files/Java-Logo.png" style="cursor: pointer;">
+</a> <h1 style="color: red; float: right;">JAVA PROGRAMMING</h1>
+
+</header> 
+    
+    <div class="container">
+        <div class="left">
+          <section>
+            <h2 style="color: blue;">::PROGRAMS IN FUNCTIONS::</h2>
+          
+          <button class="button" onclick="loadProgram(&#39;fun1.java&#39;)"> 1. Write a Java method to find the smallest number among three numbers.</button>
+          <button class="button" onclick="loadProgram(&#39;fun2.java&#39;)">2. Write a Java method to compute the average of three numbers.
+
+          </button>
+          <button class="button" onclick="loadProgram(&#39;fun3.java&#39;)">    3. Write a Java method to display the middle character of a string. Note: a) If the length of the string is odd there will be two middle characters. b) If the length of the string is even there will be one middle character.      </button>
+          <button class="button" onclick="loadProgram(&#39;fun4.java&#39;)">4. Write a Java method to count all the words in a string.</button>
+          <button class="button" onclick="loadProgram(&#39;fun5.java&#39;)">5. Write a Java method to compute the future investment value at a given interest rate for a specified number of years.
+          </button>
+          <button class="button" onclick="loadProgram(&#39;fun6.java&#39;)">6. Write a Java method to print characters between two characters (i.e. A to P).
+
+          </button>
+          <button class="button" onclick="loadProgram(&#39;fun7.java&#39;)">7. Write a Java method to check whether a string is a valid password.
+          </button>
+          <button class="button" onclick="loadProgram(&#39;fun8.java&#39;)">8. Write a Java method to display the current date and time.
+
+          </button>
+          <button class="button" onclick="loadProgram(&#39;fun9.java&#39;)">9. Write a Java method to find all twin prime numbers less than 100.
+
+
+          </button>
+          <button class="button" onclick="loadProgram(&#39;fun10.java&#39;)"> 10. Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative. </button>
+          <button class="button" onclick="loadProgram(&#39;fun11.java&#39;)"> 11. Write a Java method that accepts three integers and checks whether they are consecutive or not. Returns true or false </button>
+          <button class="button" onclick="loadProgram(&#39;fun12.java&#39;)"> 12. Write a Java method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false
+
+             </button>
+          <button class="button" onclick="loadProgram(&#39;fun13.java&#39;)"> 13. Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false. </button>
+
+
+      
+
+
+          
+        </section></div>
+      
+        <div class="right">
+          
+          
+          <div class=".container">
+          
+    
+            <iframe id="program-frame" width="100%" height="800" src="./functions_files/fun1.html"></iframe>
+      
+
+          </div>
+        </div>
+      </div> 
+                
+      
+      <script>
+        function loadProgram(programName) {
+            document.getElementById('program-frame').src = programName;
+        }
+    </script>
+
+
+
+</body></html>

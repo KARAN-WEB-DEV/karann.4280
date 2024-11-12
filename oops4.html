@@ -1,0 +1,165 @@
+
+<html>
+<head>
+<title>
+KKS
+</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.container{
+background:url('./.jpg');
+background-color:skyblue;
+background-size:100% 100%;
+background-repeat:no-repeat;
+height:100vh;
+position:relative;
+}
+
+.container::before{
+content:"";
+position:absolute
+top:0;
+left:0;
+height:100%;11:30 14-04-2023
+width:100%;
+background:rgba(0,0,0,0.2);
+z-index:-1;
+}
+.navbar{
+background:rgba(0,0,0,0.5);
+color:white;
+font-family:sans-serif;
+display:flex;
+align-item:center;
+padding:2rem 4rem;
+}
+
+
+.navbar ul{
+list-style:none;
+display:flex;
+gap:0 3rem;
+margin-left:auto;
+}
+
+.navbar li{
+cursor:pointer;
+}
+
+.navbar h2{
+          font-size:2rem;
+}
+
+.landing{
+display:flex;
+align-item:center;
+height:calc(100vh-10rem);
+padding:0 3rem;
+}
+.landing .text_container h1{
+font-size:4.5rem;
+color:white;
+font-family:sans-serif;
+text-shadow:8px 5px 10px black;
+margin-button:1.5rem;
+line-height:1.2;
+}
+
+.landing.text_container button{
+padding:1rem 3rem;
+border: none;
+outline: none;
+cursor:white;
+background:#1e90ff91;
+color:white;
+font-family:sans-serif;
+border-radius: 6px;
+box-shadow: 10px 8px 18px 2px #ffffff3b;
+}
+
+</style>
+</head>
+
+<body> <bgcolor="red">
+
+<div class="opcl">
+
+
+<div class="container">
+<div class="navbar"><div class="slideshow-container">
+
+
+<h1>Write a Java program to create a class called BOOK with a  attribute for  title,author,andISBN,and method to add and remove books from a collection. </h1>
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="color-scheme" content="light dark"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">
+
+
+import java.util.ArrayList;
+
+class Book {
+    private String title;
+    private String author;
+    private String isbn;
+
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+}
+
+class Library {
+    private ArrayList<Book> books = new ArrayList<>();
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void removeBook(String isbn) {
+        books.removeIf(book -> book.getIsbn().equals(isbn));
+    }
+
+    public void displayBooks() {
+        for (Book book : books) {
+            System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", ISBN: " + book.getIsbn());
+        }
+    }
+}
+
+public class LibraryExample {
+    public static void main(String[] args) {
+        Library library = new Library();
+        library.addBook(new Book("1984", "George Orwell", "123456789"));
+        library.addBook(new Book("The Hobbit", "J.R.R. Tolkien", "987654321"));
+
+        library.displayBooks();
+        library.removeBook("123456789");
+        library.displayBooks();
+    }
+}
+
+/*
+Output:
+Title: 1984, Author: George Orwell, ISBN: 123456789
+Title: The Hobbit, Author: J.R.R. Tolkien, ISBN: 987654321
+Title: The Hobbit, Author: J.R.R. Tolkien, ISBN: 987654321
+*/
